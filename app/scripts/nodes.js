@@ -392,6 +392,19 @@ nodes.nodeList = {
 		service: "ether1.org",
 		lib: new nodes.customNode("https://rpc.ether1.org", "")
 	}
+	vic: {
+		name: "VIC",
+		blockExplorerTX: "http://victorium.info/tx//[[txHash]]",
+		blockExplorerAddr: "http://victorium.info/tx//addr/[[address]]",
+		type: nodes.nodeTypes.VIC,
+		eip155: true,
+		chainId: 4388577777,
+		tokenList: require("./tokens/vicTokens.json"),
+		abiList: require("./abiDefinitions/vicAbi.json"),
+		estimateGas: true,
+		service: "victorium.org",
+		lib: new nodes.customNode("https://node.victorium.org", "")
+	}
 };
 
 nodes.ethPrice = require("./nodeHelpers/ethPrice");
